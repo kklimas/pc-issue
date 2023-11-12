@@ -24,4 +24,7 @@ Każdy z pomiarów trzeba zrobić per randomType
 
 ### Krótki opis programu
 Klaska Main przyjmuje domyslnie trzy argumenty THREAD_COUNT, BUFFER_SIZE, RANDOM type. Można się obejść bez tego i jakoś to
-zautomatyzować
+zautomatyzować.
+Każde rozwiązań wykonuje się współbieżnie więc wyniki powinny być po danym czasie (domyslnie 30sec - propertka EXECUTION_TIME_MILLIS).
+Kod bazuje o Jave 21 dlatego też jest maven a nie gradle. Można śmiało użyć niższych wersji z tym że będzie trzeba podmienić Executors.newVirtualThreadPerTaskExecutor()
+na coś z niższej wersji.
